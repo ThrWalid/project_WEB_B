@@ -1,0 +1,57 @@
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>📚 Dashboard Enseignant</h1>
+    <button class="btn btn-danger" (click)="logout()">Déconnexion</button>
+  </div>
+  
+  <div class="dashboard-content">
+    <div class="welcome-card">
+      <h2>Bienvenue, Professeur !</h2>
+      <p>Gérez vos cours et suivez les progrès de vos étudiants.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>📖 Mes Cours</h3>
+        <p class="stat-number">{{ myCourses.length }}</p>
+        <p class="stat-label">Cours créés</p>
+      </div>
+      
+      <div class="stat-card">
+        <h3>👨‍🎓 Étudiants</h3>
+        <p class="stat-number">{{ totalStudents }}</p>
+        <p class="stat-label">Étudiants inscrits</p>
+      </div>
+      
+      <div class="stat-card">
+        <h3>📝 Devoirs</h3>
+        <p class="stat-number">{{ totalAssignments }}</p>
+        <p class="stat-label">Devoirs créés</p>
+      </div>
+      
+      <div class="stat-card">
+        <h3>⭐ Note moyenne</h3>
+        <p class="stat-number">{{ averageRating }}</p>
+        <p class="stat-label">Évaluation cours</p>
+      </div>
+    </div>
+
+    <div class="quick-actions">
+      <h3>Actions rapides</h3>
+      <div class="action-buttons">
+        <button class="btn btn-primary">
+          <span>📚</span> Créer un cours
+        </button>
+        <button class="btn btn-primary">
+          <span>📝</span> Nouveau devoir
+        </button>
+        <button class="btn btn-primary">
+          <span>👥</span> Mes étudiants
+        </button>
+        <button class="btn btn-primary">
+          <span>📊</span> Statistiques
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>🎓 Dashboard Étudiant</h1>
+    <button class="btn btn-danger" (click)="logout()">Déconnexion</button>
+  </div>
+  
+  <div class="dashboard-content">
+    <div class="welcome-card">
+      <h2>Bienvenue, Étudiant !</h2>
+      <p>Accédez à vos cours et suivez votre progression académique.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>📚 Cours inscrits</h3>
+        <p class="stat-number">{{ enrolledCourses.length }}</p>
+        <p class="stat-label">Cours actifs</p>
+      </div>
+      
+      <div class="stat-card">
+        <h3>✅ Devoirs rendus</h3>
+        <p class="stat-number">{{ completedAssignments }}</p>
+        <p class="stat-label">Devoirs terminés</p>
+      </div>
+      
+      <div class="stat-card">
+        <h3>📊 Moyenne générale</h3>
+        <p class="stat-number">{{ averageGrade }}%</p>
+        <p class="stat-label">Note moyenne</p>
+      </div>
+      
+      <div class="stat-card">
+        <h3>⏰ Prochaine échéance</h3>
+        <p class="stat-number">{{ nextDeadline }}</p>
+        <p class="stat-label">Jours restants</p>
+      </div>
+    </div>
+
+    <div class="course-list" *ngIf="enrolledCourses.length > 0">
+      <h3>Mes Cours</h3>
+      <div class="course-grid">
+        <div class="course-card" *ngFor="let course of enrolledCourses">
+          <div class="course-header">
+            <h4>{{ course.title }}</h4>
+            <span class="course-level">{{ course.level }}</span>
+          </div>
+          <p class="course-description">{{ course.description }}</p>
+          <div class="course-progress">
+            <div class="progress-bar">
+              <div class="progress" [style.width.%]="course.progress || 0"></div>
+            </div>
+            <span class="progress-text">{{ course.progress || 0 }}% complété</span>
+          </div>
+          <button class="btn btn-primary btn-small">Accéder au cours</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="quick-actions">
+      <h3>Actions rapides</h3>
+      <div class="action-buttons">
+        <button class="btn btn-primary">
+          <span>🔍</span> Explorer les cours
+        </button>
+        <button class="btn btn-primary">
+          <span>📝</span> Mes devoirs
+        </button>
+        <button class="btn btn-primary">
+          <span>📊</span> Mes notes
+        </button>
+        <button class="btn btn-primary">
+          <span>👥</span> Forums
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

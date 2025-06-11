@@ -1,0 +1,18 @@
+@import '../admin-dashboard/admin-dashboard.component.scss';
+
+// Styles spécifiques pour le dashboard enseignant
+.welcome-card {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.stat-number {
+  color: #f093fb !important;
+}
+
+.btn.btn-primary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  
+  &:hover {
+    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);
+  }
+}

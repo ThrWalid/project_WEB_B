@@ -1,0 +1,64 @@
+<section
+  id="home"
+  class="relative isolate flex items-center justify-center min-h-[92vh] text-white overflow-hidden"
+>
+  <!-- Image de fond -->
+  <img
+  src="assets/Hero.webp" 
+    alt="Amphithéâtre UTBM"
+    class="absolute inset-0 h-full w-full object-cover opacity-80"
+    loading="lazy"
+  />
+
+  <!-- Dégradé sombre / masque -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+
+  <!-- Contenu -->
+  <div class="relative z-10 mx-auto max-w-5xl px-4 text-center">
+    <h1
+      class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight drop-shadow-xl mb-6"
+    >
+      Bienvenue à toutes et tous<br />
+      pour la rentrée&nbsp;de&nbsp;printemps&nbsp;<span class="text-amber-400">2025</span>
+    </h1>
+
+    <p class="mx-auto max-w-2xl text-lg sm:text-xl text-white/90 mb-10">
+      L’équipe UTBM Learning vous accompagne pour réussir votre semestre :
+      cours, ressources et accompagnement sur-mesure.
+    </p>
+
+    <a
+      routerLink="/auth/login"
+      class="inline-block bg-amber-400 hover:bg-amber-500 text-gray-900 font-semibold px-8 py-3 rounded-full shadow-lg transition-colors duration-300"
+    >
+      Connexion
+    </a>
+  </div>
+
+  <!-- Flèche vers la suite -->
+  <a href="#next" class="absolute bottom-6 left-1/2 -translate-x-1/2">
+    <svg
+      class="h-8 w-8 text-white animate-bounce"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  </a>
+
+  <!-- Effet de vague blanc en bas -->
+  <div class="absolute bottom-0 inset-x-0 overflow-hidden leading-[0]">
+    <svg
+      class="relative block w-[calc(100%+1.3px)] h-[90px] -rotate-180"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M321.39 56.01C192.62 79.27 64.28 95.68 0 105.4V0h1200v27.35c-69.15 31.06-180.88 58.66-321.39 28.66-187.38-40.24-270.57-3.35-399.22 0z"
+        fill="#ffffff"
+      ></path>
+    </svg>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+
+@media (min-width: 1024px) {
+    /* Très léger “parallax” sur défilement (optionnel) */
+    img {
+      transform: translateZ(0);
+      will-change: transform;
+    }
+   
+  }
+  
